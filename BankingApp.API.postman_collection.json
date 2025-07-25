@@ -1,0 +1,1533 @@
+{
+	"info": {
+		"_postman_id": "982f348d-f8be-4a28-bc79-275e9fae78b3",
+		"name": "BankingApp.API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30836162"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Clientes",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "estado",
+									"item": [
+										{
+											"name": "/api/Clientes/:id/estado",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "true",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Clientes/:id/estado",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Clientes",
+														":id",
+														"estado"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "true",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/Clientes/:id/estado",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Clientes",
+																":id",
+																"estado"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "contraseña",
+									"item": [
+										{
+											"name": "/api/Clientes/:id/contraseña",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "ut id",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Clientes/:id/contraseña",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Clientes",
+														":id",
+														"contraseña"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "ut id",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/Clientes/:id/contraseña",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Clientes",
+																":id",
+																"contraseña"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/api/Clientes/:id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Clientes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Clientes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Clientes/:id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"contraseña\": \"cill\",\n  \"direccion\": \"incididunt dese\",\n  \"identificacion\": \"Ut temp\",\n  \"nombre\": \"esse\",\n  \"id\": \"urn:uuid:1ddf3488-dfa7-d085-f07c-32c586484e48\",\n  \"genero\": \"nostrud deserunt aute\",\n  \"edad\": 74,\n  \"telefono\": \"mol\",\n  \"estado\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"contraseña\": \"cill\",\n  \"direccion\": \"incididunt dese\",\n  \"identificacion\": \"Ut temp\",\n  \"nombre\": \"esse\",\n  \"id\": \"urn:uuid:1ddf3488-dfa7-d085-f07c-32c586484e48\",\n  \"genero\": \"nostrud deserunt aute\",\n  \"edad\": 74,\n  \"telefono\": \"mol\",\n  \"estado\": true\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Clientes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Clientes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Clientes/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Clientes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Clientes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Clientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Clientes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Clientes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Clientes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Clientes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Clientes",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"contraseña\": \"cill\",\n  \"direccion\": \"incididunt dese\",\n  \"identificacion\": \"Ut temp\",\n  \"nombre\": \"esse\",\n  \"id\": \"urn:uuid:1ddf3488-dfa7-d085-f07c-32c586484e48\",\n  \"genero\": \"nostrud deserunt aute\",\n  \"edad\": 74,\n  \"telefono\": \"mol\",\n  \"estado\": true\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Clientes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Clientes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"contraseña\": \"cill\",\n  \"direccion\": \"incididunt dese\",\n  \"identificacion\": \"Ut temp\",\n  \"nombre\": \"esse\",\n  \"id\": \"urn:uuid:1ddf3488-dfa7-d085-f07c-32c586484e48\",\n  \"genero\": \"nostrud deserunt aute\",\n  \"edad\": 74,\n  \"telefono\": \"mol\",\n  \"estado\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Clientes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Clientes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Cuentas",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "estado",
+									"item": [
+										{
+											"name": "/api/Cuentas/:id/estado",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "true",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Cuentas/:id/estado",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Cuentas",
+														":id",
+														"estado"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "true",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/Cuentas/:id/estado",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Cuentas",
+																":id",
+																"estado"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/api/Cuentas/:id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Cuentas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Cuentas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Cuentas/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Cuentas",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Cuentas/:id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"clienteId\": \"2704b909-6504-da45-7e5d-bde7461004a7\",\n  \"numeroCuenta\": \"ad magna commodo\",\n  \"tipoCuenta\": \"nisi in consequat\",\n  \"cuentaId\": \"urn:uuid:b1e83527-c791-a901-283a-d18848728788\",\n  \"saldoInicial\": 17312242.872465156,\n  \"estado\": false\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Cuentas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Cuentas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"clienteId\": \"2704b909-6504-da45-7e5d-bde7461004a7\",\n  \"numeroCuenta\": \"ad magna commodo\",\n  \"tipoCuenta\": \"nisi in consequat\",\n  \"cuentaId\": \"urn:uuid:b1e83527-c791-a901-283a-d18848728788\",\n  \"saldoInicial\": 17312242.872465156,\n  \"estado\": false\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Cuentas/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Cuentas",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Cuentas/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Cuentas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Cuentas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Cuentas/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Cuentas",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "cliente",
+							"item": [
+								{
+									"name": "{clienteId}",
+									"item": [
+										{
+											"name": "/api/Cuentas/cliente/:clienteId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Cuentas/cliente/:clienteId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Cuentas",
+														"cliente",
+														":clienteId"
+													],
+													"variable": [
+														{
+															"key": "clienteId",
+															"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Cuentas/cliente/:clienteId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Cuentas",
+																"cliente",
+																":clienteId"
+															],
+															"variable": [
+																{
+																	"key": "clienteId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Cuentas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Cuentas",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Cuentas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Cuentas",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Cuentas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Cuentas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"clienteId\": \"2704b909-6504-da45-7e5d-bde7461004a7\",\n  \"numeroCuenta\": \"ad magna commodo\",\n  \"tipoCuenta\": \"nisi in consequat\",\n  \"cuentaId\": \"urn:uuid:b1e83527-c791-a901-283a-d18848728788\",\n  \"saldoInicial\": 17312242.872465156,\n  \"estado\": false\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Cuentas",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Cuentas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"clienteId\": \"2704b909-6504-da45-7e5d-bde7461004a7\",\n  \"numeroCuenta\": \"ad magna commodo\",\n  \"tipoCuenta\": \"nisi in consequat\",\n  \"cuentaId\": \"urn:uuid:b1e83527-c791-a901-283a-d18848728788\",\n  \"saldoInicial\": 17312242.872465156,\n  \"estado\": false\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Cuentas",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Cuentas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Movimientos",
+					"item": [
+						{
+							"name": "cuenta",
+							"item": [
+								{
+									"name": "{cuentaId}",
+									"item": [
+										{
+											"name": "rango",
+											"item": [
+												{
+													"name": "/api/Movimientos/cuenta/:cuentaId/rango",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Movimientos/cuenta/:cuentaId/rango?desde=2006-07-09T20:01:04.556Z&hasta=2006-07-09T20:01:04.556Z",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Movimientos",
+																"cuenta",
+																":cuentaId",
+																"rango"
+															],
+															"query": [
+																{
+																	"key": "desde",
+																	"value": "2006-07-09T20:01:04.556Z"
+																},
+																{
+																	"key": "hasta",
+																	"value": "2006-07-09T20:01:04.556Z"
+																}
+															],
+															"variable": [
+																{
+																	"key": "cuentaId",
+																	"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/Movimientos/cuenta/:cuentaId/rango?desde=2006-07-09T20:01:04.556Z&hasta=2006-07-09T20:01:04.556Z",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"Movimientos",
+																		"cuenta",
+																		":cuentaId",
+																		"rango"
+																	],
+																	"query": [
+																		{
+																			"key": "desde",
+																			"value": "2006-07-09T20:01:04.556Z"
+																		},
+																		{
+																			"key": "hasta",
+																			"value": "2006-07-09T20:01:04.556Z"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "cuentaId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "/api/Movimientos/cuenta/:cuentaId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Movimientos/cuenta/:cuentaId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Movimientos",
+														"cuenta",
+														":cuentaId"
+													],
+													"variable": [
+														{
+															"key": "cuentaId",
+															"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Movimientos/cuenta/:cuentaId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Movimientos",
+																"cuenta",
+																":cuentaId"
+															],
+															"variable": [
+																{
+																	"key": "cuentaId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{cuentaId}",
+							"item": [
+								{
+									"name": "/api/Movimientos/:cuentaId",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"cuentaId\": \"52dc9286-3c46-c0a9-2743-8aa09e03dc56\",\n  \"fecha\": \"1962-06-06T20:03:28.185Z\",\n  \"tipoMovimiento\": \"anim non\",\n  \"movimientoId\": \"urn:uuid:ccab3470-6e81-66b4-f9bb-af1d62a36b32\",\n  \"valor\": 29635033.515781198,\n  \"saldo\": 28941978.89655046\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Movimientos/:cuentaId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Movimientos",
+												":cuentaId"
+											],
+											"variable": [
+												{
+													"key": "cuentaId",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"cuentaId\": \"52dc9286-3c46-c0a9-2743-8aa09e03dc56\",\n  \"fecha\": \"1962-06-06T20:03:28.185Z\",\n  \"tipoMovimiento\": \"anim non\",\n  \"movimientoId\": \"urn:uuid:ccab3470-6e81-66b4-f9bb-af1d62a36b32\",\n  \"valor\": 29635033.515781198,\n  \"saldo\": 28941978.89655046\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Movimientos/:cuentaId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Movimientos",
+														":cuentaId"
+													],
+													"variable": [
+														{
+															"key": "cuentaId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{movimientoId}",
+							"item": [
+								{
+									"name": "/api/Movimientos/:movimientoId",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"cuentaId\": \"52dc9286-3c46-c0a9-2743-8aa09e03dc56\",\n  \"fecha\": \"1962-06-06T20:03:28.185Z\",\n  \"tipoMovimiento\": \"anim non\",\n  \"movimientoId\": \"urn:uuid:ccab3470-6e81-66b4-f9bb-af1d62a36b32\",\n  \"valor\": 29635033.515781198,\n  \"saldo\": 28941978.89655046\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Movimientos/:movimientoId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Movimientos",
+												":movimientoId"
+											],
+											"variable": [
+												{
+													"key": "movimientoId",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"cuentaId\": \"52dc9286-3c46-c0a9-2743-8aa09e03dc56\",\n  \"fecha\": \"1962-06-06T20:03:28.185Z\",\n  \"tipoMovimiento\": \"anim non\",\n  \"movimientoId\": \"urn:uuid:ccab3470-6e81-66b4-f9bb-af1d62a36b32\",\n  \"valor\": 29635033.515781198,\n  \"saldo\": 28941978.89655046\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Movimientos/:movimientoId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Movimientos",
+														":movimientoId"
+													],
+													"variable": [
+														{
+															"key": "movimientoId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Movimientos/:movimientoId",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Movimientos/:movimientoId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Movimientos",
+												":movimientoId"
+											],
+											"variable": [
+												{
+													"key": "movimientoId",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Movimientos/:movimientoId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Movimientos",
+														":movimientoId"
+													],
+													"variable": [
+														{
+															"key": "movimientoId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Movimientos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Movimientos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Movimientos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Movimientos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Movimientos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Reportes",
+					"item": [
+						{
+							"name": "/api/Reportes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Reportes?clienteId=urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57&desde=2006-07-09T20:01:04.556Z&hasta=2006-07-09T20:01:04.556Z&formato=json",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Reportes"
+									],
+									"query": [
+										{
+											"key": "clienteId",
+											"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57"
+										},
+										{
+											"key": "desde",
+											"value": "2006-07-09T20:01:04.556Z"
+										},
+										{
+											"key": "hasta",
+											"value": "2006-07-09T20:01:04.556Z"
+										},
+										{
+											"key": "formato",
+											"value": "json"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Reportes?clienteId=urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57&desde=2006-07-09T20:01:04.556Z&hasta=2006-07-09T20:01:04.556Z&formato=json",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Reportes"
+											],
+											"query": [
+												{
+													"key": "clienteId",
+													"value": "urn:uuid:114dd917-cdb7-76a7-7c18-1a83d00bbb57"
+												},
+												{
+													"key": "desde",
+													"value": "2006-07-09T20:01:04.556Z"
+												},
+												{
+													"key": "hasta",
+													"value": "2006-07-09T20:01:04.556Z"
+												},
+												{
+													"key": "formato",
+													"value": "json"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
