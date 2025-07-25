@@ -1,0 +1,109 @@
+<div class="contenedor">
+    <div class="form-box">
+        <h2>Reporte de Movimientos</h2>
+        <form [formGroup]="form" (ngSubmit)="generarReporte()" class="form-grid"
+            style="grid-template-columns: 1fr 1fr;">
+
+            <div class="campo">
+                <label for="clienteId">Cliente</label>
+                <select formControlName="clienteId" id="clienteId" class="form-input">
+                    <option value="">Seleccione un cliente</option>
+                    <option *ngFor="let c of clientes" [value]="c.id">{{ c.nombre }} ({{ c.identificacion }})</option>
+                </select>
+                <div class="invalid-feedback" *ngIf="form.get('clienteId')?.touched && form.get('clienteId')?.invalid">
+                    El cliente es obligatorio.
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="desde">Desde</label>
+                <input type="date" formControlName="desde" id="desde" class="form-input" />
+                <div class="invalid-feedback" *ngIf="form.get('desde')?.touched && form.get('desde')?.invalid">
+                    La fecha inicial es obligatoria.
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="hasta">Hasta</label>
+                <input type="date" formControlName="hasta" id="hasta" class="form-input" />
+                <div class="invalid-feedback" *ngIf="form.get('hasta')?.touched && form.get('hasta')?.invalid">
+                    La fecha final es obligatoria.
+                </div>
+            </div>
+
+            <div style="grid-column: span 2; display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+                <button type="submit" class="btn btn-save">Generar</button>
+                <a [routerLink]="['/clientes']" class="btn btn-cancelar">Ir a Clientes</a>
+            </div>
+        </form>
+    </div>
+
+    <div *ngIf="cuenta" class="list-box">
+        <h2>Resumen de Cuenta</h2>
+
+        <div class="form-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="campo">
+                <label>Número de cuenta</label>
+                <input [value]="cuenta.numeroCuenta" disabled class="form-input" />
+            </div>
+
+            <div class="campo">
+                <label>Tipo de cuenta</label>
+                <input [value]="cuenta.tipoCuenta" disabled class="form-input" />
+            </div>
+
+            <div class="campo">
+                <label>Saldo actual</label>
+                <input [value]="cuenta.saldo" disabled class="form-input" />
+            </div>
+
+            <div class="campo">
+                <label>Total créditos</label>
+                <input [value]="cuenta.totalCreditos" disabled class="form-input" />
+            </div>
+
+            <div class="campo">
+                <label>Total débitos</label>
+                <input [value]="cuenta.totalDebitos" disabled class="form-input" />
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="movimientos.length > 0" class="list-box">
+        <h2>Movimientos</h2>
+
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo Movimiento</th>
+                        <th>Valor</th>
+                        <th>Saldo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let m of movimientos">
+                        <td>{{ m.fecha | date:'short' }}</td>
+                        <td
+                            [ngClass]="{ 'credito': m.tipoMovimiento === 'crédito', 'debito': m.tipoMovimiento === 'débito' }">
+                            {{ m.tipoMovimiento }}
+                        </td>
+                        <td>{{ m.valor }}</td>
+                        <td>{{ m.saldo }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin-top: 1rem; text-align: right;">
+            <button type="button" (click)="descargarPDF()" class="btn btn-save">Descargar PDF</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="mostrarMensaje"
+    [ngClass]="{ 'toast': true, 'exito': tipoMensaje === 'exito', 'error': tipoMensaje === 'error' }"
+    class="toast-container">
+    {{ mensaje }}
+</div>

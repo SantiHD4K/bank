@@ -1,0 +1,149 @@
+<div class="contenedor">
+  <div *ngIf="clienteId || route.snapshot.routeConfig?.path?.includes('crear')" class="form-box">
+    <h2>{{ clienteId ? 'Editar Cliente' : 'Crear Cliente' }}</h2>
+    <form [formGroup]="form" (ngSubmit)="guardar()" class="form-grid" style="grid-template-columns: 1fr 1fr;">
+
+      <div class="campo">
+        <label>Nombre</label>
+        <input formControlName="nombre" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.invalid">
+          El nombre es obligatorio.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Edad</label>
+        <input type="number" formControlName="edad" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('edad')?.touched && form.get('edad')?.invalid">
+          La edad debe ser mayor o igual a 18.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Género</label>
+        <select formControlName="genero" class="form-input">
+          <option value="">Seleccione una opción</option>
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+          <option value="O">Otro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Identificación</label>
+        <input formControlName="identificacion" class="form-input" />
+        <div class="invalid-feedback"
+          *ngIf="form.get('identificacion')?.touched && form.get('identificacion')?.invalid">
+          La identificación es obligatoria.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Dirección</label>
+        <input formControlName="direccion" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('direccion')?.touched && form.get('direccion')?.invalid">
+          La dirección es obligatoria.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Teléfono</label>
+        <input formControlName="telefono" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('telefono')?.touched && form.get('telefono')?.invalid">
+          El teléfono debe tener al menos 10 dígitos.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Contraseña</label>
+        <input formControlName="contraseña" maxlength="4" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('contraseña')?.touched && form.get('contraseña')?.invalid">
+          La contraseña debe tener 4 caracteres.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Estado</label>
+        <select formControlName="estado" class="form-input">
+          <option [ngValue]="true">Activo</option>
+          <option [ngValue]="false">Inactivo</option>
+        </select>
+      </div>
+
+      <div style="grid-column: span 2; display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+        <button type="submit" class="btn btn-save">Guardar</button>
+        <a [routerLink]="['/clientes']" class="btn btn-cancelar">Cancelar</a>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="!clienteId && !route.snapshot.routeConfig?.path?.includes('crear')" class="list-box">
+    <h2>Clientes</h2>
+
+    <div class="barra-superior">
+      <input type="text" placeholder="Buscar cliente..." [(ngModel)]="filtro" (input)="filtrarClientes()"
+        class="buscar" />
+      <a [routerLink]="['/clientes/crear']" class="btn btn-nuevo">Nuevo</a>
+    </div>
+
+    <div class="contenedor-lista">
+      <div class="table-wrapper">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Identificación</th>
+              <th>Edad</th>
+              <th>Género</th>
+              <th class="estado">Estado</th>
+              <th class="acciones">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cliente of clientesFiltrados">
+              <td>{{ cliente.nombre }}</td>
+              <td>{{ cliente.identificacion }}</td>
+              <td>{{ cliente.edad }}</td>
+              <td>{{ cliente.genero === 'M' ? 'Masculino' : cliente.genero === 'F' ? 'Femenino' : 'Otro' }}</td>
+              <td class="estado">
+                <span [class.activo]="cliente.estado" [class.inactivo]="!cliente.estado">
+                  {{ cliente.estado ? 'Activo' : 'Inactivo' }}
+                </span>
+              </td>
+              <td class="acciones">
+                <a [routerLink]="['/clientes/editar', cliente.id]" class="btn btn-editar">Editar</a>
+                <button (click)="confirmarEliminacion(cliente)" class="btn btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+
+            <tr *ngIf="clientesFiltrados.length === 0">
+              <td colspan="6" style="text-align: center; padding: 2rem;">No se encontraron resultados.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="paginacion">
+        <button (click)="cambiarPagina(paginaActual - 1)" [disabled]="paginaActual === 1" class="btn-pag">Ant.</button>
+        <span>Página {{ paginaActual }} de {{ totalPaginas }}</span>
+        <button (click)="cambiarPagina(paginaActual + 1)" [disabled]="paginaActual === totalPaginas"
+          class="btn-pag">Sig.</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="mostrarMensaje"
+  [ngClass]="{ 'toast': true, 'exito': tipoMensaje === 'exito', 'error': tipoMensaje === 'error' }"
+  class="toast-container">
+  {{ mensaje }}
+</div>
+<div class="modal-backdrop" *ngIf="clienteAEliminar">
+  <div class="modal">
+    <h3>¿Estás seguro que deseas eliminar al cliente <strong>{{ clienteAEliminar.nombre }}</strong>?</h3>
+    <div class="modal-actions">
+      <button (click)="eliminarConfirmado()" class="btn btn-eliminar">Sí, eliminar</button>
+      <button (click)="cancelarEliminacion()" class="btn btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>
+

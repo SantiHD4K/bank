@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.application\\application\\services\\cuentaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.application\\application\\services\\cuentaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.application\\application\\interfaces\\imovimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.application\\application\\interfaces\\imovimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.application\\application\\services\\movimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.application\\application\\services\\movimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.domain\\entities\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.domain\\entities\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\interfaces\\imovimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\interfaces\\imovimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\movimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\movimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\interfaces\\icuentarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\interfaces\\icuentarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\cuentarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\cuentarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|c:\\users\\user\\source\\repos\\api-bank\\bankingapp.api\\bankingapp.infrastructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51F982-41A0-4C76-A711-5FB4D9F8450A}|BankingApp.API.csproj|solutionrelative:bankingapp.infrastructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CuentaService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Application\\Application\\Services\\CuentaService.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Application\\Services\\CuentaService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Application\\Application\\Services\\CuentaService.cs",
+              "RelativeToolTip": "BankingApp.Application\\Application\\Services\\CuentaService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAYwEgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T18:51:39.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T18:32:21.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovimientoService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Application\\Application\\Services\\MovimientoService.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Application\\Services\\MovimientoService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Application\\Application\\Services\\MovimientoService.cs",
+              "RelativeToolTip": "BankingApp.Application\\Application\\Services\\MovimientoService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:11:45.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMovimientoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\Interfaces\\IMovimientoRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\Interfaces\\IMovimientoRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\Interfaces\\IMovimientoRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\Interfaces\\IMovimientoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:09:11.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Movimiento.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Domain\\Entities\\Movimiento.cs",
+              "RelativeDocumentMoniker": "BankingApp.Domain\\Entities\\Movimiento.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Domain\\Entities\\Movimiento.cs",
+              "RelativeToolTip": "BankingApp.Domain\\Entities\\Movimiento.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:09:08.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswCIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:21:33.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MovimientoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\MovimientoRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\MovimientoRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\MovimientoRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\MovimientoRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:09:14.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMovimientoService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Application\\Application\\Interfaces\\IMovimientoService.cs",
+              "RelativeDocumentMoniker": "BankingApp.Application\\Application\\Interfaces\\IMovimientoService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Application\\Application\\Interfaces\\IMovimientoService.cs",
+              "RelativeToolTip": "BankingApp.Application\\Application\\Interfaces\\IMovimientoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:09:06.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovimientosController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\Controllers\\MovimientosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovimientosController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\Controllers\\MovimientosController.cs",
+              "RelativeToolTip": "Controllers\\MovimientosController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:09:15.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:19:51.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:20:54.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:21:25.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICuentaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\Interfaces\\ICuentaRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\Interfaces\\ICuentaRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\Interfaces\\ICuentaRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\Interfaces\\ICuentaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:23:14.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CuentaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\CuentaRepository.cs",
+              "RelativeDocumentMoniker": "BankingApp.Infrastructure\\Repositories\\CuentaRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\api-bank\\BankingApp.API\\BankingApp.Infrastructure\\Repositories\\CuentaRepository.cs",
+              "RelativeToolTip": "BankingApp.Infrastructure\\Repositories\\CuentaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T17:21:32.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

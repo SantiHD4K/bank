@@ -1,0 +1,130 @@
+<div class="contenedor">
+  <div *ngIf="cuentaId || route.snapshot.routeConfig?.path?.includes('crear')" class="form-box">
+    <h2>{{ cuentaId ? 'Editar Cuenta' : 'Crear Cuenta' }}</h2>
+    <form [formGroup]="form" (ngSubmit)="guardar()" class="form-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="campo">
+        <label>Número de Cuenta</label>
+        <input formControlName="numeroCuenta" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('numeroCuenta')?.touched && form.get('numeroCuenta')?.invalid">
+          <div *ngIf="form.get('numeroCuenta')?.errors?.['required']">El número de cuenta es obligatorio.</div>
+          <div *ngIf="form.get('numeroCuenta')?.errors?.['minlength']">Debe tener al menos 6 caracteres.</div>
+          <div *ngIf="form.get('numeroCuenta')?.errors?.['maxlength']">No puede tener más de 12 caracteres.</div>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Tipo de Cuenta</label>
+        <select formControlName="tipoCuenta" class="form-input">
+          <option value="">Seleccione tipo</option>
+          <option value="Ahorros">Ahorros</option>
+          <option value="Corriente">Corriente</option>
+        </select>
+        <div class="invalid-feedback" *ngIf="form.get('tipoCuenta')?.touched && form.get('tipoCuenta')?.invalid">
+          El tipo de cuenta es obligatorio.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Saldo Inicial</label>
+        <input type="number" formControlName="saldoInicial" class="form-input" />
+        <div class="invalid-feedback" *ngIf="form.get('saldoInicial')?.touched && form.get('saldoInicial')?.invalid">
+          <div *ngIf="form.get('saldoInicial')?.errors?.['required']">El saldo inicial es obligatorio.</div>
+          <div *ngIf="form.get('saldoInicial')?.errors?.['min']">No puede ser negativo.</div>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Cliente</label>
+        <select formControlName="clienteId" class="form-input">
+          <option value="">Seleccione un cliente...</option>
+          <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nombre }}</option>
+        </select>
+        <div class="invalid-feedback" *ngIf="form.get('clienteId')?.touched && form.get('clienteId')?.invalid">
+          El cliente es obligatorio.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Estado</label>
+        <select formControlName="estado" class="form-input">
+          <option [ngValue]="true">Activo</option>
+          <option [ngValue]="false">Inactivo</option>
+        </select>
+      </div>
+
+      <div style="grid-column: span 2; display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+        <button type="submit" class="btn btn-save">Guardar</button>
+        <a [routerLink]="['/cuentas']" class="btn btn-cancelar">Cancelar</a>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="!cuentaId && !route.snapshot.routeConfig?.path?.includes('crear')" class="list-box">
+    <h2>Cuentas</h2>
+
+    <div class="barra-superior">
+      <input type="text" placeholder="Buscar cuenta..." [(ngModel)]="filtro" (input)="filtrarCuentas()"
+        class="buscar" />
+      <a [routerLink]="['/cuentas/crear']" class="btn btn-nuevo">Nueva</a>
+    </div>
+
+    <div class="contenedor-lista">
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Tipo</th>
+              <th>Saldo</th>
+              <th>Cliente</th>
+              <th class="estado">Estado</th>
+              <th class="acciones">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cuenta of cuentasFiltradas">
+              <td>{{ cuenta.numeroCuenta }}</td>
+              <td>{{ cuenta.tipoCuenta }}</td>
+              <td>{{ cuenta.saldoInicial }}</td>
+              <td>{{ cuenta.cliente?.nombre || cuenta.clienteId }}</td>
+              <td class="estado">
+                <span [class.activo]="cuenta.estado" [class.inactivo]="!cuenta.estado">
+                  {{ cuenta.estado ? 'Activa' : 'Inactiva' }}
+                </span>
+              </td>
+              <td class="acciones">
+                <a [routerLink]="['/cuentas/editar', cuenta.cuentaId]" class="btn btn-editar">Editar</a>
+                <button (click)="confirmarEliminacion(cuenta)" class="btn btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr *ngIf="cuentasFiltradas.length === 0">
+              <td colspan="6" style="text-align: center; padding: 2rem;">No se encontraron resultados.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginacion">
+        <button (click)="cambiarPagina(paginaActual - 1)" [disabled]="paginaActual === 1" class="btn-pag">Ant.</button>
+        <span>Página {{ paginaActual }} de {{ totalPaginas }}</span>
+        <button (click)="cambiarPagina(paginaActual + 1)" [disabled]="paginaActual === totalPaginas"
+          class="btn-pag">Sig.</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="mostrarMensaje"
+  [ngClass]="{ 'toast': true, 'exito': tipoMensaje === 'exito', 'error': tipoMensaje === 'error' }"
+  class="toast-container">
+  {{ mensaje }}
+</div>
+
+<div class="modal-backdrop" *ngIf="cuentaAEliminar">
+  <div class="modal">
+    <h3>¿Estás seguro que deseas eliminar la cuenta <strong>{{ cuentaAEliminar.numeroCuenta }}</strong>?</h3>
+    <div class="modal-actions">
+      <button (click)="eliminarConfirmado()" class="btn btn-eliminar">Sí, eliminar</button>
+      <button (click)="cancelarEliminacion()" class="btn btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>

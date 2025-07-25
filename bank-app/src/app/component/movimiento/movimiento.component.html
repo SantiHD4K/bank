@@ -1,0 +1,118 @@
+<div class="contenedor">
+  <div *ngIf="movimientoId || route.snapshot.routeConfig?.path?.includes('crear')" class="form-box">
+    <h2>{{ movimientoId ? 'Editar Movimiento' : 'Registrar Movimiento' }}</h2>
+
+    <form [formGroup]="form" (ngSubmit)="guardar()" class="form-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="campo">
+        <label for="tipoMovimiento">Tipo de Movimiento</label>
+        <select formControlName="tipoMovimiento" class="form-input" id="tipoMovimiento">
+          <option value="crédito">Crédito</option>
+          <option value="débito">Débito</option>
+        </select>
+        <div class="invalid-feedback"
+          *ngIf="form.get('tipoMovimiento')?.touched && form.get('tipoMovimiento')?.invalid">
+          El tipo de movimiento es obligatorio.
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="valor">Valor</label>
+        <input type="number" formControlName="valor" class="form-input" id="valor" />
+        <div class="invalid-feedback" *ngIf="form.get('valor')?.touched && form.get('valor')?.invalid">
+          <div *ngIf="form.get('valor')?.errors?.['required']">El valor es obligatorio.</div>
+          <div *ngIf="form.get('valor')?.errors?.['min']">Debe ser mayor a 0.</div>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="cuenta">Cuenta</label>
+        <select formControlName="cuentaId" class="form-input" id="cuenta">
+          <option value="">Seleccione una cuenta...</option>
+          <option *ngFor="let c of cuentas" [value]="c.cuentaId">
+            {{ c.numeroCuenta }} - {{ c.tipoCuenta }}
+          </option>
+        </select>
+        <div class="invalid-feedback" *ngIf="form.get('cuentaId')?.touched && form.get('cuentaId')?.invalid">
+          La cuenta es obligatoria.
+        </div>
+      </div>
+
+
+      <div style="grid-column: span 2; display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+        <button type="submit" class="btn btn-save">Guardar</button>
+        <a [routerLink]="['/movimientos']" class="btn btn-cancelar">Cancelar</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Lista -->
+  <div *ngIf="!movimientoId && !route.snapshot.routeConfig?.path?.includes('crear')" class="list-box">
+    <h2>Movimientos</h2>
+
+    <div class="barra-superior">
+      <input type="text" placeholder="Buscar movimientos..." [(ngModel)]="filtro" (input)="filtrarMovimientos()"
+        class="buscar" />
+      <div>
+        <a [routerLink]="['/movimientos/crear']" class="btn btn-nuevo">Nuevo</a>
+      </div>
+    </div>
+
+    <div class="contenedor-lista">
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th class="estado">Tipo</th>
+              <th class="estado">Valor</th>
+              <th>Saldo</th>
+              <th>Cuenta</th>
+              <th class="acciones">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let m of movimientosFiltrados">
+              <td>{{ m.fecha | date: 'short' }}</td>
+              <td class="estado" [class.credito]="m.tipoMovimiento === 'crédito'" [class.debito]="m.tipoMovimiento === 'débito'">
+                {{ m.tipoMovimiento | titlecase }}
+              </td>
+              <td class="estado" [class.credito]="m.tipoMovimiento === 'crédito'" [class.debito]="m.tipoMovimiento === 'débito'">
+                {{ m.tipoMovimiento === 'débito' ? '-' : '+' }}{{ m.valor }}
+              </td>
+              <td>{{ m.saldo }}</td>
+              <td>{{ m.cuenta?.numeroCuenta || m.cuentaId }}</td>
+              <td class="acciones">
+                <a [routerLink]="['/movimientos/editar', m.movimientoId]" class="btn btn-editar">Editar</a>
+                <button (click)="confirmarEliminacion(m)" class="btn btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr *ngIf="movimientosFiltrados.length === 0">
+              <td colspan="5" style="text-align: center; padding: 2rem;">No se encontraron movimientos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginacion">
+        <button (click)="cambiarPagina(paginaActual - 1)" [disabled]="paginaActual === 1" class="btn-pag">Ant.</button>
+        <span>Página {{ paginaActual }} de {{ totalPaginas }}</span>
+        <button (click)="cambiarPagina(paginaActual + 1)" [disabled]="paginaActual === totalPaginas"
+          class="btn-pag">Sig.</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="mostrarMensaje"
+  [ngClass]="{ 'toast': true, 'exito': tipoMensaje === 'exito', 'error': tipoMensaje === 'error' }"
+  class="toast-container">
+  {{ mensaje }}
+</div>
+<div class="modal-backdrop" *ngIf="movimientoAEliminar">
+  <div class="modal">
+    <h3>¿Deseas eliminar el movimiento de <strong>{{ movimientoAEliminar.tipoMovimiento }}</strong> por valor de <strong>{{ movimientoAEliminar.valor }}</strong>?</h3>
+    <div class="modal-actions">
+      <button (click)="eliminarConfirmado()" class="btn btn-eliminar">Sí, eliminar</button>
+      <button (click)="cancelarEliminacion()" class="btn btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>

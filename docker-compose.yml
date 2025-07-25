@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./bank-app
+    ports:
+      - "4200:80"
+    networks:
+      - banking-net
+
+  backend:
+    build:
+      context: ./api-bank
+      dockerfile: BankingApp.API/Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - banking-net
+
+networks:
+  banking-net:
+    driver: bridge

@@ -1,0 +1,48 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #bbd0e6;
+  border-right: 1px solid #e0e0e0;
+  padding: 1.5rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav a {
+  color: #4a5568;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.nav a.active {
+  background-color: #4299e1;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+}
